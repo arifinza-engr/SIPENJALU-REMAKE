@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+    # Aktifkan mesin penulisan ulang
+    RewriteEngine On
+
+    # Jangan terapkan aturan jika target adalah direktori
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Jika berkas dengan ekstensi .php ada, arahkan tanpa ekstensi
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^(.+?)/?$ $1.php [L]
+</IfModule>
+
+#Block_Access_Url
+Options -Indexes
+
+ErrorDocument 404 /SI_penjalu/error/error.php
+ErrorDocument 403 /SI_penjalu/error/error.php
