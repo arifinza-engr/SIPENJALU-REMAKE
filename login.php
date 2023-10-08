@@ -43,10 +43,10 @@ if (isset($_POST['btnLogin'])) {
   <link rel="stylesheet" href="assets/css/login.css">
 </head>
 
-<body> <!-- Ganti "login" dengan class bawaan Bootstrap "bg-light" untuk background putih -->
+<body class="">
 
-  <div class="container my-5"> <!-- Tambahkan margin atas dan bawah dengan "my-5" -->
-    <div class="row justify-content-center"> <!-- Tambahkan "justify-content-center" untuk mengatur posisi kolom ke tengah -->
+  <!-- <div class="container my-5">
+    <div class="row justify-content-center">
       <div class="col-md-4 col-sm-6">
         <div class="card">
           <div class="card-body text-center" id="card-colour">
@@ -57,17 +57,64 @@ if (isset($_POST['btnLogin'])) {
             <form action="" method="POST" enctype="multipart/form-data">
               <input type="hidden" class="form-control" value="pengadu" name="username" id="username" />
               <input type="hidden" class="form-control" value="123" name="password" id="password" />
-
               <button type="submit" class="btn btn-primary form-control mt-3" name="btnLogin">MULAI PENGADUAN</button>
-
-              <!-- Tambahkan margin atas dengan "mt-3" untuk memberi jarak dengan tombol -->
               <p class="mt-3">SIPENJALU 2023</p>
             </form>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
+
+  <form method="post">
+    <section class="h-100 gradient-form" style="background-color: #eee;">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-xl-10">
+            <div class="card rounded-3 text-black">
+              <div class="row g-0">
+                <div class="col-lg-6">
+                  <div class="card-body p-md-5 mx-md-4">
+                    <div class="text-center">
+                      <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp" style="width: 150px;" alt="logo">
+                      <h4 class="mt-1 mb-5 pb-1">SIPENJALU</h4>
+                    </div>
+                    <div class="text-center">
+                      <img src="assets/img/tittle.png" class="user-image img-responsive mb-4" alt="User Image" style="max-width: 180px;" />
+                    </div>
+                    <div class="form-outline mb-4">
+                      <input type="hidden" id="form2Example11" class="form-control" value="pengadu" name="username" id="username" placeholder="Phone number or email address" />
+                    </div>
+                    <div class="form-outline mb-4">
+                      <input type="hidden" id="form2Example22" value="123" name="password" id="password" class="form-control" />
+                    </div>
+
+                    <div class="text-center pt-1 mb-5 pb-1">
+                      <button type="submit" class="btn btn-outline-danger form-control fa-lg gradient-custom-2 mb-3 text-white" name="btnLogin">MULAI PENGADUAN</button>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center pb-4">
+                      <p class="mb-0 me-2">SIPENJALU 2023</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                  <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                    <h4 class="mb-4 text-center">Pengaduan Penerangan Jalan Umum: Notifikasi WhatsApp</h4>
+                    <p class="small mb-0 text-justify">Kami memperkenalkan solusi formal dan efisien untuk mengatasi masalah penerangan jalan umum.
+                      Dengan aplikasi pengaduan penerangan jalan kami, setiap laporan yang Anda kirimkan akan segera diproses.
+                      Untuk memastikan Anda selalu mendapatkan informasi terbaru mengenai status pengaduan Anda,
+                      kami telah mengintegrasikan notifikasi realtime melalui WhatsApp. Dengan komitmen kami untuk memastikan
+                      penerangan jalan yang memadai dan keselamatan pengguna jalan, kami berupaya memberikan layanan yang cepat, transparan, dan akuntabel.
+                      Bermitra dengan kami untuk mewujudkan kota yang lebih terang dan aman.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </form>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
