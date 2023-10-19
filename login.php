@@ -1,30 +1,31 @@
 <?php
 include "inc/koneksi.php";
-session_start(); // Mulai sesi di awal
 
 if (isset($_POST['btnLogin'])) {
-  $username = "pengadu";
-  $password = "123";
+  // Dapatkan input user
+  $username = $_POST['username'];
+  $password = $_POST['password'];
 
-  // Menggunakan prepared statements
-  $stmt = $koneksi->prepare("SELECT * FROM tb_pengguna WHERE username=? AND password=?");
-  $stmt->bind_param("ss", $username, $password);
-  $stmt->execute();
-  $result = $stmt->get_result();
-  $data_login = $result->fetch_assoc();
+  // Lakukan query untuk mencari user
+  $sql_login = "SELECT * FROM tb_pengguna WHERE username='$username' AND password='$password'";
+  $query_login = mysqli_query($koneksi, $sql_login);
+  $data_login = mysqli_fetch_assoc($query_login);
+  $jumlah_login = mysqli_num_rows($query_login);
 
-  if ($result->num_rows == 1) {
+  // Cek jika user ditemukan
+  if ($jumlah_login == 1) {
+    session_start();
     $_SESSION["ses_id"] = $data_login["id_pengguna"];
     $_SESSION["ses_nama"] = $data_login["nama_pengguna"];
     $_SESSION["ses_level"] = $data_login["level"];
     $_SESSION["ses_grup"] = $data_login["grup"];
 
-    session_regenerate_id(); // Regenerate session ID after login
-
     echo "<script>window.location = 'index';</script>";
+  } else {
+    echo "<script>alert('Username atau Password salah!'); window.location = 'login';</script>";
   }
-  $stmt->close();
 }
+
 ?>
 
 <!doctype html>
@@ -40,7 +41,7 @@ if (isset($_POST['btnLogin'])) {
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkyPyVxHBaWGGsJgiQDe0ttKfhE1zzDZ0&callback=initMap" async defer></script>
 
-  <link rel="stylesheet" href="assets/css/login.css">
+  <link rel="stylesheet" href="assets/css/login1.css">
 </head>
 
 <body class="">
@@ -90,7 +91,7 @@ if (isset($_POST['btnLogin'])) {
                     </div>
 
                     <div class="text-center pt-1 mb-5 pb-1">
-                      <button type="submit" class="btn btn-outline-danger form-control fa-lg gradient-custom-2 mb-3 text-white" name="btnLogin">MULAI PENGADUAN</button>
+                      <button type="submit" class="btn btn-outline-primary form-control fa-lg gradient-custom-2 mb-3 text-white" name="btnLogin">MULAI PENGADUAN</button>
                     </div>
                     <div class="d-flex align-items-center justify-content-center pb-4">
                       <p class="mb-0 me-2">SIPENJALU 2023</p>
