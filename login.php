@@ -70,7 +70,7 @@ if (isset($_POST['btnLogin'])) {
                       <button type="submit" class="btn btn-outline-primary form-control fa-lg gradient-custom-2 mb-3 text-white" name="btnLogin">MULAI PENGADUAN</button>
                     </div>
                     <div class="d-flex align-items-center justify-content-center pb-4">
-                      <p class="mb-0 me-2">SIPENJALU 2023</p>
+                      <p class="mb-0 me-2">Copyright © SIPENJALU 2023 All rights reserved</p>
                     </div>
                   </div>
                 </div>

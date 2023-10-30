@@ -87,13 +87,13 @@ if (isset($_POST['btnLogin'])) {
                     </div>
 
                     <div class="text-center pt-1 mb-5 pb-1">
-                      <button type="submit" class="btn btn-outline-danger form-control fa-lg gradient-custom-2 mb-3 text-white" name="btnLogin">MASUK</button>
+                      <button type="submit" class="btn btn-outline-primary form-control fa-lg gradient-custom-2 mb-3 text-white" name="btnLogin">MASUK</button>
                       <a class="text-muted" href="#!">Forgot password?</a>
                     </div>
 
                     <div class="d-flex align-items-center justify-content-center pb-4">
                       <p class="mb-0 me-2">Don't have an account?</p>
-                      <button type="button" class="btn btn-outline-danger">Create new</button>
+                      <button type="button" class="btn btn-outline-primary">Create new</button>
                     </div>
                   </form>
                 </div>

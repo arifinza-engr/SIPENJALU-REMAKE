@@ -39,7 +39,7 @@ include "inc/koneksi.php";
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- ... -->
 
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style1.css">
   <link rel="stylesheet" href="assets/css/bs.css">
 </head>
 
@@ -108,9 +108,7 @@ include "inc/koneksi.php";
           <?php endif; ?>
 
           <?php if ($data_level == "Administrator" || $data_level == "Petugas") : ?>
-            <li class="nav-item">
-              <a class="nav-link btn btn-outline-secondary fw-bold" type="button" href="?page=logout">LOGOUT</a>
-            </li>
+            <a class="btn btn-danger fw-bold buttonLogout" type="button" href="?page=logout">LOGOUT</a>
           <?php endif; ?>
 
         </ul>
@@ -121,16 +119,6 @@ include "inc/koneksi.php";
   <div>
     <p>tes</p>
   </div>
-
-
-  <!-- <div class="p-5 rounded" style="background-image: url('assets/img/galaxy.jpg'); background-size: cover; background-position: center center; opacity: 80%">
-    <div class="p-4 rounded text-center">
-      <h1 class="display-4" id="text-sipenjalu">SIPENJALU</h1>
-      <p class="lead" id="header-text">APLIKASI PENGADUAN PENERANGAN JALAN UMUM</p>
-      <p class="lead" id="header-text">BERBASIS WEB MENGGUNAKAN REALTIME NOTIFIKASI WHATSAPP.</p>
-      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-    </div>
-  </div> -->
 
   <div class="slider_area">
     <div class="slider_active owl-carousel">
@@ -239,8 +227,7 @@ include "inc/koneksi.php";
 
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2023 Copyright:
-      <a class="text-white" href="https://mdbootstrap.com/">@finzaengr</a>
+      Copyright © SIPENJALU 2023 All rights reserved
     </div>
     <!-- Copyright -->
   </footer>
